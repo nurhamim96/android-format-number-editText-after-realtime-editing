@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_layout"
+        android:layout_width="match_parent"
+        app:prefixText="Rp. "
+        app:helperText="Masukan nominal"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/txt_number"
+            android:hint="Input number"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:filterTouchesWhenObscured="true"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_layout"
+        android:layout_marginTop="10dp"
+        android:text="Get Input Text" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text="Default"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold" />
+</RelativeLayout>
