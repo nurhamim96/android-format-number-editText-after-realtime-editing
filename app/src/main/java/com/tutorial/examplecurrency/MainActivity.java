@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
@@ -27,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textView.setText("Uang yang anda masukan sebesar \nRp. " + editText.getText().toString());
+                String cleanString = editText.getText().toString().replaceAll("[.]", "");
+                Double parseToDouble = Double.parseDouble(cleanString);
+                textView.setText("Uang yang anda masukan sebesar \nRp. " + parseToDouble);
             }
         });
     }
